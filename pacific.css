@@ -2,10 +2,10 @@
     File: pacific.css
     GUI Assignment: HW2 CSS Website
     Copyright (c) 2023 by Ben.
-	Due: June 6, 2023
-	Description: This file is the CSS needed to transform the provided
-	html file into the desired appearance of the Pacific Trails Resort
-	website as specified by the assignment.
+    Due: June 6, 2023
+    Description: This file is the CSS needed to transform the provided
+    html file into the desired appearance of the Pacific Trails Resort
+    website as specified by the assignment.
 */
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
     display: block;
@@ -18,16 +18,12 @@ body { /* Uses image of gradient rather than CSS gradient*/
     color: #666666;
     font-family: Arial, Helvetica, sans-serif;
 }
-img {/*float the image left*/
-    float: left;
-    margin-right: 20px;
-}
 #wrapper {/*div of everything thats in the body (not including background)*/
     display: grid; /*I am using CSS grids for each of the components*/
     width: 80%;
     margin: auto;/*centers body b/t l and r*/
     grid-template-rows: auto 1fr auto; /*header, nav + content, footer*/
-    grid-template-columns: 30% 70%; /*nav space*/
+    grid-template-columns: 200px 1fr; /*nav space, content space*/
     min-width: 600px;
     margin-top: 20px;
     margin-bottom: 60px;
@@ -37,7 +33,11 @@ header {/*Header section*/
     background-image: url(sunset.jpg);
     background-repeat: no-repeat;
     background-position: right;
-	background-color:#000033;
+    background-color:#000033;
+}
+img {/*float the image left*/
+    float: left;
+    margin-right: 20px;
 }
 #content {/*div with image and most of text*/
     background-color: white;
@@ -55,7 +55,7 @@ nav {/*nav bar*/
 }
 a {/*email + nav links*/
     text-decoration: none;
-	color:#000033;
+    color:#000033;
 }
 nav a:visited {/*nav links*/
     color: #344873;
@@ -64,7 +64,10 @@ nav a:hover {/*nav links*/
     color: #FFFFFF;
 }
 nav a {
-	font-weight: bold;
+    font-weight: bold;
+}
+h1, h2 {/*general*/
+    font-family: Georgia, "Times New Roman", serif;
 }
 h1 {/*header over the sunset*/
     margin: 0;
@@ -77,9 +80,6 @@ h2 {/*Content header*/
 .resort {/*name of the resort span*/
     color: #447799;
     font-weight: bold;
-}
-h1, h2 {/*general*/
-    font-family: Georgia, "Times New Roman", serif;
 }
 #contact {/*contact div*/
     font-size: 90%;
