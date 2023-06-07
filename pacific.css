@@ -1,0 +1,100 @@
+/*  Benjamin Jancsy
+    File: pacific.css
+    GUI Assignment: HW2 CSS Website
+    Copyright (c) 2023 by Ben.
+	Due: June 6, 2023
+	Description: This file is the CSS needed to transform the provided
+	html file into the desired appearance of the Pacific Trails Resort
+	website as specified by the assignment.
+*/
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+body { /* Uses image of gradient rather than CSS gradient*/
+    background-color: #00569f; /*Needed for below the image of gradient*/
+    background-image: url(ptrbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 200% 100%; /* 200% so it looks good even when zoomed in and scrolled to right */
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img {/*float the image left*/
+    float: left;
+    margin-right: 20px;
+}
+#wrapper {/*div of everything thats in the body (not including background)*/
+    display: grid; /*I am using CSS grids for each of the components*/
+    width: 80%;
+    margin: auto;/*centers body b/t l and r*/
+    grid-template-rows: auto 1fr auto; /*header, nav + content, footer*/
+    grid-template-columns: 30% 70%; /*nav space*/
+    min-width: 600px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+header {/*Header section*/
+    grid-column: 1 / span 2;/*location and space taken up of grid*/
+    background-image: url(sunset.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+	background-color:#000033;
+}
+#content {/*div with image and most of text*/
+    background-color: white;
+    list-style-image: url(marker.gif);
+    list-style-position: inside;
+    padding: 0 30px;
+}
+nav ul {/*the unordered list of the navbar*/
+    font-size: 1.2em;
+    list-style: none;
+}
+nav {/*nav bar*/
+    grid-row: 2 / span 2;/*location and space taken up of grid*/
+    background-color: #90cef0;
+}
+a {/*email + nav links*/
+    text-decoration: none;
+	color:#000033;
+}
+nav a:visited {/*nav links*/
+    color: #344873;
+}
+nav a:hover {/*nav links*/
+    color: #FFFFFF;
+}
+nav a {
+	font-weight: bold;
+}
+h1 {/*header over the sunset*/
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+h2 {/*Content header*/
+    color: #3399CC;
+}
+.resort {/*name of the resort span*/
+    color: #447799;
+    font-weight: bold;
+}
+h1, h2 {/*general*/
+    font-family: Georgia, "Times New Roman", serif;
+}
+#contact {/*contact div*/
+    font-size: 90%;
+}
+dt {/*didnt notice this in the html file but was provided by prof.*/
+    color: #000033;
+}
+footer {/*footer section*/
+    font-family: Georgia, "Times New Roman", serif;
+    grid-column: 2 / span 1;/*location and space taken up of grid*/
+    background-color: white;
+    padding: 30px;
+    font-style: italic;
+    font-size: 80%;
+}
+footer a {/*I want the email link to be underlined*/
+    text-decoration: underline;
+}
